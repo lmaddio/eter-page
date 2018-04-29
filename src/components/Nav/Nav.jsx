@@ -1,9 +1,9 @@
 import React from 'react'
 
-import logo from '../../logo.svg'
+import logo from '../../assets/logo.svg'
 
 const Nav = ({links})=> (
-  <nav className="navbar navbar-transparent navbar-top" role="navigation">
+  <nav className="navbar navbar-transparent navbar-top">
     <div className="container">
       <div className="navbar-header">
         <button id="menu-toggle" type="button" className="navbar-toggle" data-toggle="collapse" data-target="#example">
@@ -26,9 +26,9 @@ const Nav = ({links})=> (
       <div className="collapse navbar-collapse" id="example">
         {links ? 
         (<ul className="nav navbar-nav navbar-right">
-          {links.map(({icon, to, text},i)=>(
+          {links.map(({icon, anchor, text},i)=>(
             <li key={i.toString()}>
-              <a href={to}>
+              <a {...anchor}>
                 {icon ? <i className={"fa "+icon} /> : null}
                 {text}
               </a>

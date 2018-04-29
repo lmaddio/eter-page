@@ -1,9 +1,11 @@
 import React from 'react'
 
-const Parallax = () => (
+import './Parallax.css';
+
+const Parallax = ({t}) => (
   <div className="Parallax parallax filter-gradient blue" data-color="blue">
     <div className="parallax-background">
-      <img className="parallax-background-image" src="assets/img/template/bg3.jpg" />
+      <img className="parallax-background-image" src="assets/img/template/bg3.jpg" alt="background"/>
     </div>
     <div className="container">
       <div className="row">
@@ -14,9 +16,9 @@ const Parallax = () => (
         </div>*/}
         <div className="col-md-6 col-md-offset-3">
           <div className="description" style={{textAlign: "center"}}>
-            <h2>ETER!</h2>
+            <h2>{t('home.header.title')}</h2>
             <br />
-            <h5>Monitor libre de calidad de aire para proyectos de ciencia comunitaria</h5>
+            <h5>{t('home.header.subtitle')}</h5>
           </div>
           {/*<div className="buttons">
             <button className="btn btn-fill btn-neutral">
